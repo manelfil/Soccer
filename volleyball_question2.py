@@ -17,5 +17,10 @@ class attaque(Strategy):   #socceraction: cours ou shoot  #fait la passe+shoot
         #shoot a la position dist ball(position a laquelle on veut qu'il soit de l'adversaire)-adversaire  
      
        #faire la passe la plus loin possible de l'adversaire
-       
-       
+    
+        return SoccerAction(shoot=s.fait_la_passe_loin)
+    
+    
+    
+    
+

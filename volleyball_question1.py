@@ -36,28 +36,5 @@ volley_show_simu(simu)
     
     
         
-class Defenseur1_Strategy(Strategy):   #socceraction: cours ou shoot  shoot dans la balle #GARDIEN
-    def __init__(self):
-        Strategy.__init__(self, "defenseur1")    
-    
-    def compute_strategy(self, state, id_team, id_player):
-        # id_team is 1 or 2
-        # id_player starts at 0
-        s= SuperState(state, id_team, id_player) 
-        
-     
-        #action1= SoccerAction(acceleration=s.ball-s.player) 
-        action2=SoccerAction(shoot=s.shoot_vers_cages) 
-        
-        
-        if(((s.id_team==1) and s.ball.x<(s.get_limite/2) and (s.goal.y-15)<s.ball.y and s.ball.y<(s.goal.y+15)) or (s.id_team==2 and (s.ball.x>(s.get_limite+(settings.GAME_WIDTH/3)) and (s.goal.y-15)<s.ball.y and s.ball.y<(s.goal.y+15)))):   
-            return SoccerAction(acceleration=s.court_vers_balle_anticipation)+ action2  
-        else:
-            return SoccerAction(acceleration=s.retour_posDef-s.player)
-        return SoccerAction()     
 
-action1=SoccerAction(shoot=(s.fait_la_passe2))
-           
-           
-           
            
