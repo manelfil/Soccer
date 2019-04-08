@@ -1,0 +1,20 @@
+Pour la question 1:
+
+    la strategie retourne une action de shoot vers l'adversaire 
+
+
+Pour la question 2:
+
+    La strategie utilise la methode fait_la_passe_loin qui elle permet:
+         -si le joueur de l'equipe adversaire et dans la 1ere moitié de son terrain de lancer la balle
+         dans la 2eme moitié du terrain
+         
+         -et inversement
+         
+Pour la question3:
+
+    -Des que la balle entre dans le terrain, le defenseur court vers la balle (court_vers_balle_anticipe)
+    grace à l'action1
+    
+    -Puis il renvoie la balle dans le camp adverse (fait_la_passe_loin)
+    
